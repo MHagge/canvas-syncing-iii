@@ -14,17 +14,17 @@ const checkGravity = () => {
 
   for (let i = 0; i < keys.length; i++) {
     const char1 = characters[keys[i]];
-    if (char1.y < 400 - char1.height/2) {
+    if (char1.y < (400 - (char1.height / 2))) {
       // move the last x/y to our previous x/y variables
       char1.prevX = char1.x;
       char1.prevY = char1.y;
 
       char1.destY += 4;
 
-      //char1.alpha = 0.05;
+      // char1.alpha = 0.05;
 
       // update their time stamp?
-      //char1.lastUpdate = new Date().getTime();
+      // char1.lastUpdate = new Date().getTime();
 
       process.send(new Message('applyGravity', char1));
     }
