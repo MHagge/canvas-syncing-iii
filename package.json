@@ -1,0 +1,29 @@
+{
+  "name": "canvas-syncing-iii",
+  "version": "1.0.0",
+  "description": "canvas syncing assignment iii for 590 - implementing gravity calculated by server",
+  "main": "./server/app.js",
+  "scripts": {
+    "build": "babel ./client --out-file ./hosted/compiled.js",
+    "watch": "babel --watch ./client --out-file ./hosted/compiled.js",
+    "nodemon": "nodemon --watch ./server ./server/app.js",
+    "start": "node ./server/app.js",
+    "pretest": "eslint ./server --fix",
+    "test": "echo \"Tests Complete\""
+  },
+  "author": "Muriel Hagge",
+  "license": "UNLICENCED",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.3.2",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3",
+    "xxhashjs": "^0.2.1"
+  }
+}
